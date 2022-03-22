@@ -107,16 +107,16 @@ public Countries(String name, float area) {
             else{
                 System.out.println();
                 System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                        + getArea() + "кв. км., " + "Население неизвестно, " 
+                        + getArea() + " кв. км., " + "Население неизвестно, " 
                                 + "Столица: " + getNamecapital() 
                         +", Население столицы неизвестно;");
             }
         }
         else{
             System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                    + getArea() + "кв. км., " + "Население: " + getPopulation() 
-                    + "чел., " + "Столица: " + getNamecapital() 
-                    + ", Население столицы: " + getPopulationcapital() + "чел.");
+                    + getArea() + " кв. км., " + "Население: " + getPopulation() 
+                    + " чел., " + "Столица: " + getNamecapital() 
+                    + ", Население столицы: " + getPopulationcapital() + " чел.");
         }
     }
 

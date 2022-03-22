@@ -28,8 +28,9 @@ public class DEV_J110_1_P1 {
         Countries.printAll(country);
                 System.out.println();
 
+                                
                 for (Countries someCountry:country) {
-                        System.out.printf("Плотность %s равна %.2f  жителе на кв. км.\n",someCountry.getName(),someCountry.getDensity());
+                        System.out.println("Плотность " +someCountry.getName()+ " равна " +someCountry.getDensity() +  " жителе на кв. км.");
                 }
 
     }
