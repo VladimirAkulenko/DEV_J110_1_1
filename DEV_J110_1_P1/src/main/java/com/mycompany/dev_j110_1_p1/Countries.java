@@ -49,7 +49,7 @@ public Countries(String name, float area) {
 
     public void setName(String name) {
         if (name == null)
-            throw new IllegalArgumentException("Введите название");
+            throw new IllegalArgumentException("Введите название страны");
         this.name = name;
     }
 
