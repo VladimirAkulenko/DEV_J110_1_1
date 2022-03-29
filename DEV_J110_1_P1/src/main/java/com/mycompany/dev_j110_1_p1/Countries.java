@@ -14,7 +14,6 @@ public class Countries {
     private float population;
     private String namecapital;
     private float populationcapital;
-    private float density;
 
 public Countries(String name, float area) {
         setName(name);
@@ -22,23 +21,19 @@ public Countries(String name, float area) {
     }
 
     public Countries(String name, float area, String namecapital) {
-        setName(name);
-        setArea(area);
+        this(name,area);
         setNamecapital(namecapital);
     }
 
     public Countries(String name, float area, float population) {
-        setName(name);
-        setArea(area);
+        this(name,area);
         setPopulation(population);
         namecapital = null;
         populationcapital = 0;
     }
 
     public Countries(String name, float area, float population, String namecapital, float populationcapital) {
-        setName(name);
-        setArea(area);
-        setPopulation(population);
+        this(name,area,population);
         setNamecapital(namecapital);
         setPopulationcapital(populationcapital);
     }
@@ -93,40 +88,35 @@ public Countries(String name, float area) {
 
 
     public void print (){
-        if(getNamecapital() == null && getPopulation() !=0){
-        System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                + getArea() + " кв. км., " + "Население: " 
-                + getPopulation() + " чел.");
+        if(namecapital == null && population !=0){
+        System.out.println("Название: " + name + ", " + "Площадь: " 
+                + area + " кв. км., " + "Население: " 
+                + population + " чел.");
         }
-        else if (getPopulation()==0){
-            if(getNamecapital() == null){
-                System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                        + getArea() + " кв. км., " + "Население: " 
+        else if (population==0){
+            if(namecapital == null){
+                System.out.println("Название: " + name + ", " + "Площадь: " 
+                        + area + " кв. км., " + "Население: " 
                                 + " Население неизвестно,");
             }
             else{
                 System.out.println();
-                System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                        + getArea() + " кв. км., " + "Население неизвестно, " 
-                                + "Столица: " + getNamecapital() 
+                System.out.println("Название: " + name + ", " + "Площадь: " 
+                        + area + " кв. км., " + "Население неизвестно, " 
+                                + "Столица: " + namecapital 
                         +", Население столицы неизвестно;");
             }
         }
         else{
-            System.out.println("Название: " + getName() + ", " + "Площадь: " 
-                    + getArea() + " кв. км., " + "Население: " + getPopulation() 
-                    + " чел., " + "Столица: " + getNamecapital() 
-                    + ", Население столицы: " + getPopulationcapital() + " чел.");
+            System.out.println("Название: " + name + ", " + "Площадь: " 
+                    + area + " кв. км., " + "Население: " + population 
+                    + " чел., " + "Столица: " + namecapital 
+                    + ", Население столицы: " + populationcapital + " чел.");
         }
     }
 
     public static void printAll (Countries[] countries){
-        countries[0].print();
-        countries[1].print();
-        countries[2].print();
-        countries[3].print();
-        countries[4].print();
-        countries[5].print();
-        countries[6].print();
+        for (Countries count : countries)
+            count.print();
     }   
 }
